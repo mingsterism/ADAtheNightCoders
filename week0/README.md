@@ -29,6 +29,8 @@
   git add .                            // enter the rocket
   git commit -am 'My Commit message'   // close the door
   git push                             // launch to github
+  git fetch --all                       // fetches the latest updates from github
+  git branch -r                           // see all the latest branches
   ```
   [Git Reference Tutorial](https://gist.github.com/digitaljhelms/4287848)
 * Understanding the foundations of javascript language
