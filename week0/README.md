@@ -12,11 +12,13 @@
 * Installing nodejs and running your own javascript file
 * Learn the basic history of dos and bash
 * Learn linux comamnds
-  * cd 
-  * cd .. 
-  * ls 
-  * mkdir 
-  * rmdir
+```
+  cd 
+  cd .. 
+  ls 
+  mkdir 
+  rmdir
+```
 * Learn on semantic versioning
   * MAJOR.MINOR.PATCH (eg: 2.1.1)
 * Learning the basics of nodejs
@@ -25,7 +27,7 @@
   ```
   git add .  
   git commit -am 'My Commit message'
-  git push origin
+  git push 
   ```
 * Understanding the foundations of javascript language
   * Conditionals
