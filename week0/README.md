@@ -25,6 +25,7 @@
   * [Talk by the founder of nodejs](https://www.youtube.com/watch?v=ztspvPYybIY)
 * Learning how to use git commands
   ```
+  git checkout branchName
   git add .  
   git commit -am 'My Commit message'
   git push 
