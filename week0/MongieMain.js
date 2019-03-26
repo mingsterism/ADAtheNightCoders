@@ -8,10 +8,17 @@ console.log("the number of the land", (land1 + land2) > 0)
 var sea1 = 0
 var sea2 = -2
 console.log("the number of the sea is", (sea1 + sea2) >0)
-var THEFATCAT = 28
-var score = 100
-var age = 8
-var total = age + score
-name = "Ted"
-console.log(name score) "is" score "and my" age total "is", age + score)
-console.log("my score and my age total is", total)
+function AgeGenerator (SeniorCitizen) {
+    if (SeniorCitizen < 60) {
+        console.log("Not a Senior")
+    } else if (SeniorCitizen > 60) { 
+        console.log("Probably Dead") 
+    } else { 
+        console.log("Congratulations")
+    }
+}
+AgeGenerator(88)
+AgeGenerator(100)
+AgeGenerator(5)
+AgeGenerator(30)
+AgeGenerator(60)
