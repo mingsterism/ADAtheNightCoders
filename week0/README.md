@@ -29,6 +29,7 @@
   git commit -am 'My Commit message'
   git push 
   ```
+  [Git Reference Tutorial](https://gist.github.com/digitaljhelms/4287848)
 * Understanding the foundations of javascript language
   * Conditionals
   * Loops
