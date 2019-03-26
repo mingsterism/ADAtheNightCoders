@@ -11,6 +11,9 @@
 #### Day 2
 * Installing nodejs and running your own javascript file
 * Learn the basic history of dos and bash
+  * [original video from the founder of nodejs](https://www.youtube.com/watch?v=ztspvPYybIY)
+  * [what is bash](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+  * [the mind behind linux](https://www.youtube.com/watch?v=o8NPllzkFhE)
 * Learn linux comamnds
 ```
   cd 
