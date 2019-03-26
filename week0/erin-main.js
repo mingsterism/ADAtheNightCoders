@@ -8,7 +8,7 @@ console.log("My name is ", name)
 var age = 28
 var score = 100
 var total = age + score 
-var name = "Charles"
+name = "Charles"
 
 console.log ("name score is score and my age total is" , age + score)
 console.log ("my score and my age total is",total)
