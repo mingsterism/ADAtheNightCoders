@@ -35,9 +35,18 @@
   [Git Reference Tutorial](https://gist.github.com/digitaljhelms/4287848)
 * Understanding the foundations of javascript language
   * Conditionals
+    ```
+    true || false == true
+    true && false == false
+    true && true == true
+    false && true == false
+    false || true == true
+    false && false == false
+    ```
   * Loops
   * Functions
 * Code tracing and reading code
+  * [Tools for codetracing](http://www.pythontutor.com/visualize.html#mode=edit)
 
 # What was our 1 key takeaway
 * Charles
