@@ -25,10 +25,10 @@
   * [Talk by the founder of nodejs](https://www.youtube.com/watch?v=ztspvPYybIY)
 * Learning how to use git commands
   ```
-  git checkout branchName
-  git add .  
-  git commit -am 'My Commit message'
-  git push 
+  git checkout branchName // change to branch branchName
+  git add .                            // enter the rocket
+  git commit -am 'My Commit message'   // close the door
+  git push                             // launch to github
   ```
   [Git Reference Tutorial](https://gist.github.com/digitaljhelms/4287848)
 * Understanding the foundations of javascript language
