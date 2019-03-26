@@ -12,3 +12,22 @@ name = "Charles"
 
 console.log ("name score is score and my age total is" , age + score)
 console.log ("my score and my age total is",total)
+
+
+
+
+function gradeResult (examResults){
+    if (examResults <50){
+        console.log ("i pass it")
+     } else if (examResults > 50 || examResults < 70){
+        console.log ("My grade is A")
+    } else if (examResults > 70 && examResults < 85){
+        console.log("My grade is A+" )
+    } else {
+        console.log("Yes!!")
+    }
+}
+
+gradeResult(88)
+gradeResult(100)
+gradeResult(200)
