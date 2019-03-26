@@ -46,6 +46,7 @@
   * Loops
   * Functions
 * Code tracing and reading code
+  * [Tools for codetracing](http://www.pythontutor.com/visualize.html#mode=edit)
 
 # What was our 1 key takeaway
 * Charles
