@@ -11,10 +11,10 @@ console.log("my score and my age total is", age + score)
 var total = age + score
 console.log("my score and my age total is", total)
 
-var favpet = "cat"
+var petname = "feimao"
 var petage = 4
 
 console.log("my age and my pet age is", age + petage)
-console.log("my pet name is" , favpet)
+console.log("my pet name is" , petname)
 
-console.log("my name is", name, "and my pet is", favpet)
+console.log("my name is", name, "and my pet is", petname)
