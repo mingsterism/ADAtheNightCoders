@@ -69,7 +69,13 @@
 2. Learn what you need to run javascript code  
 3. Get nodejs working for vscode
 4. Learn to touch type
+5. [Codeacademy javascript challenges](https://www.codecademy.com/learn/introduction-to-javascript)
+6. Customize your own vscode 
+   1. Get code runner up and running
+   2. Install your own vscode theme
 
 # Weekly Extra challenges
 1. Get Hexchat up and running 
    1. signup to freenode and chat in the javascript room
+2. Load up the tor browser on your own - explore the dark web
+3. Get started on vim
