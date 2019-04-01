@@ -155,10 +155,10 @@ function isEvenOrOdd(rounds) {
     }
   }
   // string interpolation
-  return `the number of even is ${sumEven} and number of odd is ${sumOdd}`
+  return `the number of even is ${sumEven} and number of odd is ${sumOdd}`;
 }
 
-console.log(isEvenOrOdd(100))
+console.log(isEvenOrOdd(100));
 
 // count the number of odd and even numbers between 1 and 100 using
 // only functions above
@@ -174,3 +174,17 @@ console.log(isEvenOrOdd(100))
 // all odd numbers between any 2 values
 
 // convert all of them to functions
+
+// while loops
+
+// datastructures
+// arrays
+var hobbies = ["swimming", "cycling", "badminton"]
+// objects
+var myProfile = {
+  name: "James",
+  age: 10,
+  hobbies: ["swimming", "cycling"]
+};
+
+// variables, loops , conditionals, datastructures
