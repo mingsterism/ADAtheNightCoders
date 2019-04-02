@@ -133,42 +133,34 @@ function isOdd(x) {
   }
 }
 
-function isEvenOrOdd(oddCounter, evenCounter, primeCounter, rounds) {
-  for (var number = 0; number < rounds; number++) {
-    if (number % 2 == 0) {
-      evenCounter = evenCounter + 1;
-      return evenCounter;
-    } else if (number % 3 == 0 || number % 5 == 0) {
-      oddCounter++;
-    }
-  }
-}
 
-function isEvenOrOdd(rounds) {
-  var sumEven = 0;
-  var sumOdd = 0;
-  for (var x = 0; x < rounds; x++) {
-    if (isEven(x)) {
-      sumEven = sumEven + 1;
-    } else if (isOdd(x)) {
-      sumOdd = sumOdd + 1;
-    }
-  }
-  // string interpolation
-  return `the number of even is ${sumEven} and number of odd is ${sumOdd}`;
-}
-
-console.log(isEvenOrOdd(100));
 
 // count the number of odd and even numbers between 1 and 100 using
 // only functions above
+function countEvenOrOdd(rounds) {
+  var countEven = 0;
+  var countOdd = 0;
+  for (var x = 0; x < rounds; x++) {
+    if (isEven(x)) {
+      countEven = countEven + 1;
+    } else if (isOdd(x)) {
+      countOdd = countOdd + 1;
+    }
+  }
+  console.log("I will run after the for loop is finished", countEven, countOdd)
+  return `the number of even is ${countEven} and number of odd is ${countOdd}`;
+}
 
-// sum the number of even numbers between any 2 numbers
+// find the total count of even numbers between any 2 numbers. EG: function sumEven(x, y) 
+// where x < y
+// eg sumEven(1, 10) >>  Ans is 4
+// eg sumEven(2, 348) >>  Ans is _
 
 // sum the number of all the odd numbers between any 2 numbers
 
-// find the total of all sum of even numbers minus sum of
+// find difference between the sum of all even numbers and the sum of
 // all odd numbers between 1 and 1000
+
 
 // find the total of all sum of even numbers minus sum of
 // all odd numbers between any 2 values
