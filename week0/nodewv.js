@@ -119,3 +119,9 @@ function gradeCalculator (examResults) {
     gradeCalculator(66)
 
 
+// count the number of even numbers from 1 to 1000
+// print the even numbers between 1 and 10
+
+for(x=1; x<10; x = x + 1){
+    console.log("the number between 1 to 10 is ", x)
+}
