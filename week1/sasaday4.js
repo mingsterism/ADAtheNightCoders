@@ -27,37 +27,88 @@
 // }
 // }
 
-// console.log(machine(10))
-// console.log(machine(11))
+// // console.log(machine(10))
+// // console.log(machine(11))
+
+
+
+// start ------------------------------------------------------------------
+
+// function isEven(x) {
+//   if (x % 2 == 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// function isOdd(x) {
+//   if (x % 3 == 0 || x % 5 == 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// function isEvenOrOdd(x, round) {
+//   var sumEven = 0;
+//   var sumOdd = 0;
+//   for (x; x < round; x++) {
+//     if (isEven(x)) {
+//       sumEven = sumEven + x;
+//     }
+//     if (isOdd(x)) {
+//       sumOdd = sumOdd + x;
+//     }
+//   }
+//   var diff = sumEven + sumOdd;
+//   return `number is ${diff}`;
+// }
+
+// console.log(isEvenOrOdd(2, 7));
+
+// end -----------------------------------------------------------------
+
+
+
+start -----------------------------------------------------------------------
+
 function isEven(x) {
   if (x % 2 == 0) {
-    return true;
+      return true;
   } else {
-    return false;
+      return false;
   }
 }
-
 function isOdd(x) {
   if (x % 3 == 0 || x % 5 == 0) {
-    return true;
+      return true;
   } else {
-    return false;
+      return false;
   }
 }
 
-function isEvenOrOdd(x, round) {
+function evenPlusOddPlusPrime(x, round) {
   var sumEven = 0;
   var sumOdd = 0;
-  for (x; x < round; x++) {
-    if (isEven(x)) {
-      sumEven = sumEven + x;
-    }
-    if (isOdd(x)) {
-      sumOdd = sumOdd + x;
-    }
+  var sumPrime = 0;
+  for (x; x <= round; x++) {
+      if (isEven(x)) {
+          sumEven = sumEven + x;
+      } else if (isOdd(x)) {
+          sumOdd = sumOdd + x;
+      } else {
+          sumPrime = sumPrime + x;
+      }
   }
-  var diff = sumEven + sumOdd;
-  return `number is ${diff}`;
+  var sumAll = sumEven + sumOdd + sumPrime;
+  var sumEvenMinusOdd = sumEven - sumOdd;
+  console.log('the sum of even is ', sumEven);
+  console.log('the sum of odd is ', sumOdd);
+  console.log('the sum of prime is', sumPrime);
+  console.log('the total from 1 to 10 is', sumAll);
+  console.log('sumEven minus sumOdd is', sumEvenMinusOdd);
 }
+evenPlusOddPlusPrime(1, 10);
 
-console.log(isEvenOrOdd(2, 7));
+end --------------------------------------------------------------
