@@ -38,3 +38,22 @@ console.log(ratingMachine(123213) - penalty < 0); // check if the rating is more
 var myName = "WeiNing";
 myName = "Charles"; // variable reassignment
 console.log(myName);
+
+
+ /**
+  * Create a for-loop. Log the numbers from 1 to 100
+  */
+
+
+
+  /**
+   * Create a conditional statement. 
+   * 1) Check if the number is positive
+   * 2) Check if the number is even or odd
+   */
+
+   /**
+    * Functions
+    * 1) Sum all the even numbers from 1 to 100
+    */
+
