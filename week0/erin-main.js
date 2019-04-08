@@ -19,10 +19,12 @@ console.log ("my score and my age total is",total)
 function gradeResult (examResults){
     if (examResults <50){
         console.log ("i pass it")
+        return "cat"
      } else if (examResults > 50 || examResults < 70){
         console.log ("My grade is A")
     } else if (examResults > 70 && examResults < 85){
         console.log("My grade is A+" )
+        return "mickey"
     } else {
         console.log("Yes!!")
     }
@@ -31,3 +33,10 @@ function gradeResult (examResults){
 gradeResult(88)
 gradeResult(100)
 gradeResult(200)
+
+//Loops
+//var sum = 0
+
+
+
+

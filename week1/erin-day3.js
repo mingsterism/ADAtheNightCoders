@@ -65,6 +65,10 @@
 // console.log("there was", primeCounter, "prime values");
 
 // sum all the even number  1 and 1000
+
+// turn below into a function which returns true given an
+// event number in argument
+
 function sum_even_numbers(arg1, arg2) {
     if (arg1 + arg2 == 0) {
         return true;
@@ -72,6 +76,7 @@ function sum_even_numbers(arg1, arg2) {
     return false;
 }
 
+// Functions are REUSABLE
 function isEven(x) {
     if (x % 2 == 0) {
         return true;
@@ -133,7 +138,7 @@ function isEvenOrOdd(x,rounds){
             sumOdd = sumOdd +1;
         }
     }
-
+    
     return `the number of even ${sumEven} and number of odd is ${sumOdd}`
 }
 
@@ -144,12 +149,33 @@ console.log (isEvenOrOdd(2,100))
 // count the number of odd and even numbers between 1 and 100 using
 // only functions above
 
-// sum the number of even numbers between any 2 numbers
+function countEvenOrOdd(rounds){
+    var countEven = 0;
+    var countOdd = 0;
+    for (var x = 0; x < rounds; x++){
+        if (countEven(x)){
+            sumEven = sumEven + 1;
+
+        }if (count(x)){
+            sumOdd = sumOdd +1;
+        }
+    }
+    
+    return `the number of even ${sumEven} and number of odd is ${sumOdd}`
+}
+
+console.log (isEvenOrOdd(2,100))
+
+// find the total count of even numbers between any 2 numbers. EG: function sumEven(x, y) 
+// where x < y
+// eg sumEven(1, 10) >>  Ans is 4
+// eg sumEven(2, 348) >>  Ans is _
 
 // sum the number of all the odd numbers between any 2 numbers
 
-// find the total of all sum of even numbers minus sum of
+// find difference between the sum of all even numbers and the sum of
 // all odd numbers between 1 and 1000
+
 
 // find the total of all sum of even numbers minus sum of
 // all odd numbers between any 2 values
@@ -160,3 +186,13 @@ console.log (isEvenOrOdd(2,100))
 
 // datastructures
 // arrays
+var hobbies = ["swimming","cycling","badminton"]
+//objects
+var myProfile = {
+    name:" Erin",
+    age:10,
+    hobbies: ["swimming","cycling"]
+
+};
+
+// variables, loops , conditionals, datastructures
