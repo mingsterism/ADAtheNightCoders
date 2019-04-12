@@ -11,61 +11,61 @@
 // have to see how it goes. Ok time to sleep. I sleep early for bed everyday because my boyfriend
 // tells me to.
 
-var erinProfile = {
-  name: "Erin",
-  hobbies: ["dancing", "dreamy"],
-  essentricLevel: 0.8
-};
+// var erinProfile = {
+//   name: "Erin",
+//   hobbies: ["dancing", "dreamy"],
+//   essentricLevel: 0.8
+// };
 
-var mingProfile = {
-  name: "Ming",
-  skills: ["teaching", "typing"],
-  coolLevel: 0.99
-};
+// var mingProfile = {
+//   name: "Ming",
+//   skills: ["teaching", "typing"],
+//   coolLevel: 0.99
+// };
 
-var karmunBoyfriendProfile = {
-  name: "KarMunBF",
-  characteristic: ["loving", "caring"]
-};
+// var karmunBoyfriendProfile = {
+//   name: "KarMunBF",
+//   characteristic: ["loving", "caring"]
+// };
 
-var karmunFavourites = {
-  favouriteAnimalType: "reptiles",
-  favouriteColor: "turquoise",
-  hobbies: ["sing", "laugh"]
-};
+// var karmunFavourites = {
+//   favouriteAnimalType: "reptiles",
+//   favouriteColor: "turquoise",
+//   hobbies: ["sing", "laugh"]
+// };
 
-var karmunTestimonial = {
-  name: "Karmun",
-  workingExperienceInYears: 5,
-  expertise: "fashion",
-  favourite: karmunFavourites,
-  characteristics: ["pessimictic", "introvert", "observant", "shy"],
-  greatestFear: erinProfile,
-  favouriteLecturer: mingProfile,
-  partner: karmunBoyfriendProfile,
-  relationshipStatus: "In A Relationship",
-  relationshipIdentity: "submissive",
-  passionateLevelForHumans: 0.7
-};
+// var karmunTestimonial = {
+//   name: "Karmun",
+//   workingExperienceInYears: 5,
+//   expertise: "fashion",
+//   favourite: karmunFavourites,
+//   characteristics: ["pessimictic", "introvert", "observant", "shy"],
+//   greatestFear: erinProfile,
+//   favouriteLecturer: mingProfile,
+//   partner: karmunBoyfriendProfile,
+//   relationshipStatus: "In A Relationship",
+//   relationshipIdentity: "submissive",
+//   passionateLevelForHumans: 0.7
+// };
 
-var Friendss = [
-  { name: "Karmun1", company: "MNS" },
-  { name: " Weevian2", company: "MoneyChanger" },
-  { name: "WeiNing3", company: "MoneyChanger" },
-  { name: "Charles4", company: "ADA" },
-  { name: "Pung5", company: "TBA" }
-];
+// var Friendss = [
+//   { name: "Karmun1", company: "MNS" },
+//   { name: " Weevian2", company: "MoneyChanger" },
+//   { name: "WeiNing3", company: "MoneyChanger" },
+//   { name: "Charles4", company: "ADA" },
+//   { name: "Pung5", company: "TBA" }
+// ];
 
-var melProfile = {
-  name: "Melissa",
-  age: 27,
-  friends: Friendss
-};
+// var melProfile = {
+//   name: "Melissa",
+//   age: 27,
+//   friends: Friendss
+// };
 
-console.log(melProfile.friends);
+// console.log(melProfile.friends);
 
 var melissaProfile = {
-  name: "Melissa",
+  namee: "Melissa",
   age: 27,
   height: 155,
   hobbies: ["tv", "laptop"],
@@ -102,16 +102,14 @@ var louisProfile = {
   ]
 };
 
-console.log(melissaProfile.family[1]);
-console.log(melissaProfile.family[1].hobbies[1]);
-function calculateAverage(profile, y) {
-  var profileFamily = profile.family;
+function calculateAverage(x, y) {
+  var x = x.family;
   var total = 0;
-  for (var x = 0; x < profileFamily.length; x++) {
-    total = total + profileFamily[x][y];
+  for (var i = 0; i < x.length; i++) {
+    total = total + x[i][y];
   }
   {
-    var average = total / profileFamily.length;
+    var average = total / x.length;
     console.log(average);
   }
 }
@@ -120,3 +118,23 @@ calculateAverage(melissaProfile, "age");
 calculateAverage(melissaProfile, "height");
 calculateAverage(louisProfile, "age");
 calculateAverage(louisProfile, "height");
+
+// console.log(melissaProfile.family[1]);
+// console.log(melissaProfile.family[1].hobbies[1]);
+// console.log("My name is", melissaProfile.namee);
+// console.log("My age is", melissaProfile.age);
+// console.log("My height is", melissaProfile.height);
+// console.log("My mothers name is", melissaProfile.family[1].name);
+// console.log(
+//   melissaProfile.family[4].name,
+//   "is always",
+//   melissaProfile.family[4].hobbies[0],
+//   "with",
+//   melissaProfile.family[3].name
+
+var ming = { name: "ming", age: 10 };
+var charles = { name: "charles", age: 14 };
+
+var myProfile = { name: "Melissa", friends: [ming, charles] };
+
+console.log(myProfile.friends[0].age);
