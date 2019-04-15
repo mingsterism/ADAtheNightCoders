@@ -10,18 +10,18 @@ const readline = require("readline").createInterface({
   output: process.stdout
 });
 
-readline.question("WHat is your name", (ans) => {
-  var name = ans
-})
-readline.question("WHat is your age", (ans) => {
-  var age = ans
-})
-readline.question("WHat is your hobbies", (ans) => {
-  var hobbies = ans
-})
+// readline.question("WHat is your name", (ans) => {
+//   var name = ans
+// })
+// readline.question("WHat is your age", (ans) => {
+//   var age = ans
+// })
+// readline.question("WHat is your hobbies", (ans) => {
+//   var hobbies = ans
+// })
 
-const height = readline.question("what is your height")
-console.log(height)
+// const height = readline.question("what is your height")
+// console.log(height)
 // console.log(`your name is ${name}. your age is ${age} and your hobby is ${hobbies}`)
 
 
@@ -55,6 +55,6 @@ function runTheGame(answer) {
   })
 }
 
-// runTheGame(100)
+runTheGame(100)
 
 
