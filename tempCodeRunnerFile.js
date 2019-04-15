@@ -1,2 +1,1 @@
-og(count);
-      var count
+receiver
