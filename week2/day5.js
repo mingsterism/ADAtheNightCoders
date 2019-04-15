@@ -79,14 +79,55 @@ console.log(karmunProfile.study.studentCharacteristic[0]);
 
 //profile.friends = profile['friends'] //string
 
-function calculateAverage(profile, attributes) {
-  var erinsFriends = profile.friends;
-  var totalAge = 0;
-  for (var x = 0; x < profile.friends.length; x++) {
-    var totalAge = totalAge + profileFriends[x][attributes];
+// function calculateAverage(profile, attributes) {
+//   var erinsFriends = profile.friends;
+//   var totalAge = 0;
+//   for (var x = 0; x < profile.friends.length; x++) {
+//     var totalAge = totalAge + profileFriends[x][attributes];
+//   }
+//   var averageAge = totalAge / 3;
+//   console.log(averageAge);
+// }
+
+// calculateAverage(erinProfile.age);
+
+//const --> immutability
+
+const myProfile = {
+  name: "Wei Ning",
+  age: 18,
+  favourite: ["durian", "chocolate", "french fries"],
+  pet: "hamster"
+};
+
+const friendProfile = {
+  bestFriends: [
+    { name: "Cherry", age: 18, height: 182 },
+    { name: "Blueberry", age: 27, height: 190 },
+    { name: "Strawberry", age: 31, height: 155 },
+    { name: "Raspberry", age: 43, height: 164 }
+  ]
+};
+
+console.log(
+  `I am ${myProfile.name} and my best friend is ${
+    friendProfile.bestFriends[0].name
+  }.`
+);
+
+function calculateAverage(Profile, y) {
+  var Profile = friendProfile.bestFriends;
+  var total = 0;
+  for (var x = 0; x < Profile.length; x++) {
+    var total = total + Profile[x][y];
   }
-  var averageAge = totalAge / 3;
-  console.log(averageAge);
+  var average = total / Profile.length;
+  console.log(average);
+  return average;
 }
 
-calculateAverage(erinProfile.'age')
+calculateAverage(friendProfile, "age");
+console.log(
+  "My friend average height is",
+  calculateAverage(friendProfile, "height")
+);

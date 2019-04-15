@@ -33,3 +33,9 @@
 // return(shout out something);
 //}
 //console.log(roo(something to say))
+
+//in same folder
+//module.exports = {isOdd}
+//const isOdd = require('playground'); -> look for folder_file
+//const readline = require
+//this.mana -> oriented

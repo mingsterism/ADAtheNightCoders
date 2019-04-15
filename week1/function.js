@@ -11,6 +11,10 @@ function student(age) {
   }
 }
 
+module.exports = {
+  student
+};
+
 function evening(day) {
   if (day == "Monday") {
     return "pudding";

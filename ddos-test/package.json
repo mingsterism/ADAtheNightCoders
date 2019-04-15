@@ -1,0 +1,22 @@
+{
+  "name": "wn-ddos-test",
+  "version": "0.0.1",
+  "description": "just for fun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ddos",
+    "website",
+    "hack",
+    "fun"
+  ],
+  "author": "weining2048",
+  "license": "MIT",
+  "dependencies": {
+    "is-odd": "^3.0.1",
+    "one-liner-joke": "^1.2.0",
+    "pyramid": "0.0.2"
+  }
+}
