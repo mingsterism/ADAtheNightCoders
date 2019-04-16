@@ -26,6 +26,7 @@ class Batman {
   attacked() {
     this.hp = this.hp - 10;
   }
+  superAttack( )
 }
   var batman = new Batman(100, 100, 100);
   batman.attack()

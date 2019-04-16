@@ -34,3 +34,10 @@ var totalAge =pungProfile.family[0].age + pungProfile.family[1].age + pungProfil
 var averageAge = totalAge / pungProfile.family.length
 
 console.log(averageAge)
+
+function calculateAverage (profile, attributes) {
+    var profileFamily = profile.family
+    for (var x = 0; x < profileFamily.length; x++) {
+        var totalAge = totalAge + profileFamily.length[x][attributes]
+    }
+}

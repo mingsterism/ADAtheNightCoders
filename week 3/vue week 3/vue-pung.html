@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+    console.log("hey")
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>my First vue project</h1>
+        <p>i am static. i cant change</p>
+        <h2>{{ message }}</h2>
+        <p>My age is {{age}} and my ranking is {{ ranking }}</p>
+        <h2>The age multiply by the ranking is {{ age * ranking }}</h2>
+        <h1>Ogre age is {{ age }}</h1>
+        <h3>Ogre 1 HP: {{ ogre1HP }}</h3>
+        <div class="square" v-on:click="attack()"></div>
+        <h3>Ogre 2 HP: {{ ogre2HP }}</h3>
+        <button v-on:click="attack()">Attack</button>
+        <button v-on:click="heal()">HEAL</button>
+        <button v-on:click="iAmTheKing()">Who are you?</button>
+        <input v-model="search" placeholder="search">
+        <input type="text" v-model="myName" v-on:keyup.enter="handleEnter" />
+        <h4 v-for="(friend, index) in friends">{{ friend }}</h4>
+    </div>
+
+    <script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: `Hello Vue! The random number is ${Math.random()}`,
+            search: `WHO AM I??`,
+
+            age: 10,
+            ranking: 300,
+            ogre1HP: 4000,
+            ogre2HP: 2000,
+            magiMana: 300,
+            friends: [],
+            myName: ""
+        },
+        methods: {
+            attackNow() {
+                console.log("Attackkk");
+            },
+            attack() {
+                console.log("ATACKKK");
+                console.log(this.age);
+                this.age = this.age * 100;
+            },
+            heal() {
+                console.log("abracadabra!!")
+                console.log(this.ogre1HP);
+                this.ogre1HP = this.ogre1HP + 100;
+            },
+            iAmTheKing() {
+                console.log("wuala")
+            },
+            handleEnter() {
+                this.friends.push(this.myName);
+            },
+        }
+    });
+     </script>
+</body>
+</html>
