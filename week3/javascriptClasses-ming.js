@@ -45,10 +45,8 @@ class Ogre {
       if (hitOrMiss > 0.5) {
         this.attack(fluffles);
         console.log("attacked");
-        return 'noooo'
       } else {
         console.log("missed");
-        return 'hi'
       }
     }
     console.log("FINISHED THE ROUND")

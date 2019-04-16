@@ -47,3 +47,43 @@
 * Learning on your own. Learning to be independent. - Charles
 * Teaching others is a way to practice - Melissa
 * Be curious - Charles
+
+# Notes from the coordinator
+1) This week we solidfied our knowlege of javascript and the classes. We learnt about constructors and methods. 
+2) We created mini classes of Ogres and Humans with methods of `attack` and `heal`. 
+3) We learnt what it takes to build a mini program that contains state
+4) Finally we moved to Vuejs where we build reactive dynamic websites that has use interractions. 
+
+
+# Vuejs
+Vue is an SPA (Single Page Application)
+_Read the docs_ [Vuejs Documentation](https://vuejs.org/v2/guide/)
+
+# Vuejs competitors - The world of SPA's
+1) React -- Facebook
+2) Angular -- Google
+
+# The 3 main parts of a vuejs application
+HTML: Structure of a site
+CSS: Style of a site
+Javascript: Engine of a site
+
+# Weekly Challenge
+Finish the entire vuejs documentation **essentials only**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
