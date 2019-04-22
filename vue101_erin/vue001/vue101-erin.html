@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  
+
+    <script>
+      console.log("HEYYY");
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>my First Vue Project</h1>
+      <p1>I am stactic.I cannot changes</p1>
+      <h2>{{ message }}</h2>
+      <p>My age {{age}} and my ranking is {{ranking}}</p>
+      <h2>The multiply by by the ranking is {{ age * ranking}}</h2>
+      <h1>Ogre age is {{age}}</h1>
+      <h3>Ogre 1 Hp : {{ ogre2Hp}}</h3>
+      <div class="square" v-on:click = "attack()"></div>
+      <h3>Ogre 2 Hp : {{ ogre2Hp}}</h3>
+      <button v-on:click = "attack()">Attack</button>
+      <button v-on:click = "heal()">HEAL</button>
+
+      <!-- <p>Message is: {{ search }}</p> -->
+      <input v-model="search" placeholder="search">
+      <input type="text" v-model= "myName" v-on:keyup.enter ="handleEnter"/>
+      <h4 v-for = "(friends, index) in friends">{{ friends}}</h4>
+
+     </div>
+     <div v-if="show" transition="expand">hello</div>
+    
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: `Hello Vue ! The number is ${Math.random()}`,
+          search :`Search Now`,
+          age: 10,
+          ranking: 300,
+          ogre1HP: 4000,
+          ogre2Hp: 2000,
+          magimana: 300,
+          friends:[],
+          myName:""
+          
+        },
+        methods: {
+            attackNow(){
+                console.log("Attackk");
+            },
+
+            attack(){
+                console.log("ATACKKK");
+                console.log(this.age);
+                this.age = this.age *100;
+            },
+            
+            heal(){
+                console.log ("My ranking is 2 star");
+                console.log(this.ranking);
+                this.ranking = this.ranking *20;
+            },
+            
+            handleEnter(){
+                this.friends.push(this.myName);
+                this.myName = ""
+            }
+        }
+      });
+    </script>
+  </body>
+</html>
