@@ -1,8 +1,4 @@
-
-function boo() {
-  console.log("yaa");
-}
-function foo (x) {
+function foo(x=100) {
   if (x % 3 === 0) {
     return true;
   } else {
@@ -11,10 +7,11 @@ function foo (x) {
 }
 
 function boo() {
-  console.log("yaa")
+  console.log("yaa");
 }
 
 module.exports = {
   foo,
-  boo: boo
+  boo: boo // same as boo
 };
+

@@ -213,3 +213,6 @@ function calculateAverage(profile, attributes) {
 
 calculateAverage(erinProfile, "height");
 calculateAverage(pangProfile, "age");
+
+
+
