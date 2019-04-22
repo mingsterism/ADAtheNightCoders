@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sasa To Do List</title>
+    <script src="/vue/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+
+      <h2>To Do List:</h2>
+
+      <input
+        type="text"
+        placeholder="todo"
+        v-model="task"
+        v-on:keyup.enter="addtodos()"
+      />
+
+      <div v-for="todo in todos">
+        <input type="checkbox" v-on:click="deleteTodo(todo)" />
+        <button v-on:click="deleteTodo(todo)">DELETE</button>
+        <ul>
+          {{
+            todo
+          }}
+        </ul>
+      </div>
+
+      <h1>Completed</h1>
+      <div v-for="todo in completed">
+        <p>{{ todo }}</p>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue",
+          what: "what?",
+          todos: [],
+          task: "",
+          completed: []
+        },
+
+        methods: {
+          addtodos() {
+            this.todos.push(this.task);
+            this.task = "";
+          },
+          deleteTodo(val) {
+            console.log(val, "---------------");
+            this.todos = this.todos.filter(todo => todo !== val);
+            this.completed.push(val);
+          },
+          completeTodo() {
+            // you want to add to the competeda array whilst removing from the todos array
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

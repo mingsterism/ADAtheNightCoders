@@ -26,6 +26,8 @@ class human {
     otherHuman.hp = otherHuman.hp + 20;
     return { healer: this.name, healee: otherHuman.name };
   }
+
+  superAttack(others) {}
 }
 
 var human1 = new human("lisa", 100, 100, 100, 100);

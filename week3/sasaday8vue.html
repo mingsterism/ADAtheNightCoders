@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      console.log("I am a human");
+    </script>
+    <title>HI I AM A NOT AN ANIMAL</title>
+    <style>
+      .blue {
+        color: blue;
+      }
+
+      .square {
+        border: 20px solid chocolate;
+        height: 0px;
+        width: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>My name is Mel</h1>
+      <p>I cannot move because I am static</p>
+      <h2 class="blue">{{ message }}</h2>
+      <div class="square" v-on:click="attack()"></div>
+      <h2>My age is {{ age }}, and my ranking is {{ rank }}</h2>
+      <h2>Ogre age is twice my age so it is {{ age * 2 }}</h2>
+
+      <h4>My friend name is {{ myName }}</h4>
+      <input type="text" v-model="myName" v-on:keyup.enter="handleEnter" />
+      <h4 v-for="(friend,index) in friend">{{ friend }}</h4>
+      <h3>My Money : {{ myMoney }}</h3>
+      <h3>Ogre1 Money : {{ ogre1Money }}</h3>
+      <h3>Ogre2 Money : {{ ogre2Money }}</h3>
+      <h3>Ogre1 HP : {{ ogre1Hp }}</h3>
+      <h3>Ogre2 HP : {{ ogre2Hp }}</h3>
+      <button v-on:click="attack()">Attack Ogre1</button>
+      <button v-on:click="attack2()">Attack Ogre 2</button>
+      <button v-on:click="steal()">Steal 10 bucks from Ogre1</button>
+      <button v-on:click="steal2()">Steal 20 bucks from Ogre2</button>
+
+      <form action="attack()">
+        <label><input type="radio" /> Use Thunder Bolt on Ogre 1</label>
+
+        <label><input type="checkbox" /> Use Heal</label>
+
+        <button>Submit</button>
+      </form>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: `Hello Vue! Random number is ${Math.random()}`,
+          age: 10,
+          rank: 1000,
+          ogre1Hp: 4000,
+          ogre2Hp: 2000,
+          myMoney: 1000,
+          ogre1Money: 200,
+          ogre2Money: 300,
+          myName: "",
+          friend: []
+        },
+
+        methods: {
+          attackNow() {
+            console.log("ATTACK NOWWWW");
+          },
+          attack() {
+            console.log("ATTACK");
+            console.log(this.ogre1Hp);
+            this.ogre1Hp = this.ogre1Hp - 20;
+          },
+          attack2() {
+            console.log("ATTACK");
+            console.log(this.ogre1Hp);
+            this.ogre2Hp = this.ogre2Hp - 15;
+          },
+
+          steal() {
+            console.log("STEAL");
+            this.myMoney = this.myMoney + 10;
+            this.ogre1Money = this.ogre1Money - 10;
+          },
+          steal2() {
+            console.log("STEAL");
+            this.myMoney = this.myMoney + 20;
+            this.ogre2Money = this.ogre2Money - 20;
+          },
+
+          handleEnter() {
+            this.friend.push(this.myName);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
