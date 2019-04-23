@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <title>Vue Testing</title>
+    <style>
+      .appClass {
+        border: 3px solid black;
+      }
+      .abc {
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="appClass">
+      <h1>Who Win The World</h1>
+      <p>Anything but Nothing</p>
+      <h2>{{ message }}</h2>
+      <p>My age is {{ age }} and my ranking is {{ ranking }}</p>
+      <h2 class="abc">Magician Hp: {{ magicianHp }}</h2>
+      <h1>Introduce my new friend {{ myName }}</h1>
+      <button v-on:click="attack()">Attack</button>
+      <button v-on:click="heal()">Heal</button>
+      <input
+        type="text"
+        placeholder="Introduce your friend"
+        v-model="myName"
+        v-on:keyup.enter="handleEnter"
+      />
+      <h4 v-for="(friend, index) in friends">{{ friend }}</h4>
+      <picture>
+        <source media="(min-width: 650px)" srcset="card_magician.jpg" />
+        <img src="card_magician.jpg" alt="magician" style="width:auto;" />
+      </picture>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: `Hello Ladies ! My heart beat ${Math.random()}`,
+          age: 10,
+          ranking: 100,
+          magicianHp: 2500,
+          friends: [],
+          myName: ""
+        },
+        methods: {
+          attackNow() {
+            console.log("Attack");
+          },
+          attack() {
+            console.log(this.magicianHp);
+            this.magicianHp = this.magicianHp - 50;
+          },
+          heal() {
+            console.log(this.magicianHp);
+            this.magicianHp = this.magicianHp + 20;
+          },
+          handleEnter() {
+            this.friends.push(this.myName);
+            this.myName = "";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

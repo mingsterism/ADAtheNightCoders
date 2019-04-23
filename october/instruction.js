@@ -39,3 +39,20 @@
 //const isOdd = require('playground'); -> look for folder_file
 //const readline = require
 //this.mana -> oriented
+//Math.random()
+
+//html:5 --> template
+//<script>console.log()</script>
+//Vuejs competitors: React (Facebook); Angular (Google)
+//<button v-on:click ="attack()">Attack</button>
+
+//curl or fetch -> pull data API
+//computed:{} -> only load when data comes in
+//callSwapi(){
+//    fetch("https://api").then(resp =>{
+//        resp.json().then(data => {
+//    this.starWarsData = data.results[0].name
+//}
+//            )
+//    })
+//}

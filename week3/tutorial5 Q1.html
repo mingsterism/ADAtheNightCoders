@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Box Model</title>
+  </head>
+  <style>
+    .main-header {
+      font-family: "Helvetica";
+      font-size: 30px;
+      font-style: bold;
+      margin: 5px;
+      border-left-width: 5cm;
+    }
+    .paragraph {
+      margin: 5px;
+      border-left-width: 5cm;
+      font-size: 20px;
+    }
+    .main-box {
+      background-color: lightgrey;
+      border: 25px solid green;
+      margin: 25px;
+      padding: 25px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 400px;
+    }
+    .main-box2 {
+      background-color: darkred;
+      width: 450px;
+      height: 500px;
+    }
+    .title {
+      border: 5px double white;
+      margin: 40px;
+      padding: 20px;
+      justify-content: 50px;
+      flex-wrap: wrap;
+      text-align: center;
+      color: white;
+      width: 300px;
+      height: 400px;
+    }
+  </style>
+  <body>
+    <div>
+      <h1 class="main-header">Demonstrating the Box Model</h1>
+      <p class="paragraph">
+        The CSS box model is essentially a box that wraps around every HTML.
+      </p>
+      <p class="main-box">
+        The text is the actual content of the box. We have added a 25px padding,
+        25px margin and a 25px green border. The text is the actual content of
+        the box. We have added a 25px padding, 25px margin and a 25px green
+        border. The text is the actual content of the box. We have added a 25px
+        padding, 25px margin and a 25px green border. The text is the actual
+        content of the box. We have added a 25px padding, 25px margin and a 25px
+        green border. The text is the actual content of the box. We have added a
+        25px padding, 25px margin and a 25px green border.
+      </p>
+    </div>
+    <div class="main-box2">
+      <div class="title">
+        <img
+          src="keep_calm.png"
+          alt="keep_calm"
+          style="width:200px;height:100px;filter: invert(1)"
+        />
+        <h1>Keep</h1>
+        <h1>Calm</h1>
+        <h3>And</h3>
+        <h1>Do</h1>
+        <h1>Coding</h1>
+      </div>
+    </div>
+  </body>
+</html>

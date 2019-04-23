@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Vue Testing 2</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <input
+        type="text"
+        placeholder="To do..."
+        v-model="task"
+        v-on:keyup.enter="addTodo()"
+      />
+      <div v-for="todo in todos">
+        <input
+          type="checkbox"
+          onchange="this.checked = !this.checked"
+          v-on:click="completeTodo(todo)"
+        />
+        <button v-on:click="deleteTodo(todo)">Delete TODO</button>
+        <p>
+          {{ todo }}
+        </p>
+      </div>
+      <h1>Completed</h1>
+      <div v-for="todo in completed">
+        <p>{{ todo }}</p>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Things TO DO!",
+          todos: [],
+          task: "",
+          completed: []
+        },
+        methods: {
+          addTodo() {
+            this.todos.push(this.task);
+            this.task = "";
+          },
+          deleteTodo(val) {
+            // this.todos.shift(this.task);
+            // this.task = "";
+            this.todos = this.todos.filter(todo => todo !== val);
+          },
+          completeTodo(val) {
+            this.todos = this.todos.filter(todo => todo !== val);
+            this.completed.push(val);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!---->
