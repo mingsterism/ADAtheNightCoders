@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <style>
+      .msg1 {
+        font-size: 45px;
+      }
+      .msg2 {
+        font-size: 25px;
+      }
+      .complete {
+        font-size: 25px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="msg1">{{ message1 }}</h1>
+      <h2 class="msg2">{{ message2 }}</h2>
+      <input
+        type="text"
+        placeholder="Write here"
+        v-model="todotask"
+        v-on:keyup.enter="handleEnter()"
+      />
+      <div v-for="todo in todos">
+        <p>{{ todo }}</p>
+        <button v-on:click="deleteTodo(todo)">Delete</button>
+        <input
+          type="checkbox"
+          onchange="this.checked =! this.checked"
+          v-on:click="completeTodo(todo)"
+        />
+        <!-- <button v-on:click="completeTodo(todo)">Complete</button> -->
+      </div>
+
+      <h1 class="complete">Completed</h1>
+      <div v-for="todo in completed">
+        <p>{{ todo }}</p>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message1: "Tell me how busy you are",
+          message2: "What you need to do:-",
+          todos: [],
+          todotask: "",
+          completed: []
+        },
+        methods: {
+          completeTodo(val) {
+            this.todos = this.todos.filter(todo => todo !== val);
+            this.completed.push(val);
+          },
+          handleEnter() {
+            this.todos.push(this.todotask);
+            this.todotask = "";
+          },
+          deleteTodo(val) {
+            // console.log(val, "---------------------");
+            this.todos = this.todos.filter(todo => todo !== val);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

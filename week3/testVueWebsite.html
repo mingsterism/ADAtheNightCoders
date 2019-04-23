@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script>
+      console.log("Hellooo World!! I'm on vue!! Yay");
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" class="appClass">
+      <h1>I'm just testing vue.WV</h1>
+      <p>This is a static line --------</p>
+      <h2>{{ message }}</h2>
+      <h3>Ally units:</h3>
+      <h4>peon1hp: {{ peon1hp }}</h4>
+      <h4>peon2hp: {{ peon2hp }}</h4>
+      <h4>Gil: {{ gil }}</h4>
+      <h4>Food: {{ food }}</h4>
+      <h4>Lumber: {{ lumber }}</h4>
+      <button v-on:click="harvestlumber()">Harvest</button>
+      <button v-on:click="mining()">Mining</button>
+      <button v-on:click="trainUnits()">Train</button>
+
+      <h5>Add other units:</h5>
+      <input type="text" v-model="unitName" v-on:keyup.enter="handleEnter" />
+      <h5 v-for="(unit, index) in unit">{{ unit }}</h5>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: `Hello Vue! Your lucky number is ${Math.random()}`,
+          peon1hp: 450,
+          peon2hp: 420,
+          gil: 30888,
+          food: 235,
+          lumber: 3620,
+          unit: [],
+          unitName: ""
+        },
+        methods: {
+          harvestlumber() {
+            console.log("Okie dokie");
+            console.log(this.lumber);
+            this.lumber = this.lumber + 5;
+            console.log(this.food);
+            this.food = this.food - 2;
+          },
+          mining() {
+            console.log(this.gil);
+            this.gil = this.gil + 80;
+          },
+          handleEnter() {
+            this.unit.push(this.unitName);
+            this.unitName = "";
+          },
+          trainUnits() {
+            function trainUnits() {
+              for (x = 0; x < 20; x++) {
+                if (x % 2 == 0) {
+                  console.log("peon", x);
+                } else if (x % 3 == 0) {
+                  console.log("peon", x);
+                } else {
+                  console.log("peon", x);
+                }
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

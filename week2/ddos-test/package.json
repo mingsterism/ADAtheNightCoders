@@ -1,0 +1,21 @@
+{
+  "name": "wanacry-ddos-test",
+  "version": "0.0.1",
+  "description": "make you cry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ddos",
+    "wana",
+    "cry",
+    "test"
+  ],
+  "author": "TWV",
+  "license": "MIT",
+  "dependencies": {
+    "is-odd": "^3.0.1",
+    "one-liner-joke": "^1.2.0"
+  }
+}
