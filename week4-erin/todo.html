@@ -10,6 +10,12 @@
      </script>
     <title>Document</title>
 </head>
+
+<style>
+
+
+
+</style>
 <body>
     <div id="app">
      
@@ -20,16 +26,29 @@
     <button v-on:click="Complete('sweep the room')">Complete</button>
     <input type="edit" v-model= "myService" v-on:keyup.enter ="handleEnter"/>
     <h4 v-for = "(service, index) in service">{{service}}</h4>
+
+    <label class="container">One
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Two
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Three
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Four
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
     
 
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames">
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-    <label for="mike">Mike</label>
-    <br>
-    <span>Done {{ checkedNames }}</span>
+    
 
     
     </div>
@@ -42,7 +61,6 @@
         name: `Room Service`,
         edit:`Service`,
         service:[],
-        checkedNames:[],
         myService:"" 
         },
         methods:{
