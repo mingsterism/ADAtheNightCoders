@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      TODO: 
+      1) Allow user to click the completed todo and it will go back to the todos list
+      2) Allow user to edit the todo by clicking on it
+      3) Change todo to checkbox instead of button
+     -->
+    <div id="app">
+      <input
+        type="text"
+        v-model="task"
+        placeholder="Enter a task"
+        v-on:keyup.enter="addTodo()"
+      />
+      <h1>{{ message }}</h1>
+      <h1>Todos</h1>
+      <div v-for="todo in todos">
+        <button v-on:click="completeTodo(todo)">COMPLETE</button>
+        <p>{{ todo }}</p>
+      </div>
+      <h1>Completed</h1>
+      <div v-for="todo in completed">
+        <p>{{ todo }}</p>
+      </div>
+      <!-- <button v-on:click="callSwapi('people')">Get people</button>
+      <button v-on:click="callSwapi('planets')">Get planets</button>
+      <button v-on:click="callSwapi('starships')">Get starships</button> -->
+      <button v-on:click="arrange('people')">Arrange people</button>
+      <ul v-for="data in starWarsData">
+        <li>{{ data.name }}</li>
+      </ul>
+      <div>========================================================</div>
+     
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+          todos: ["sweep", "mop", "clean", "run"],
+          completed: ["yaaaaaaa"],
+          task: "",
+          starWarsData: {},
+          longest: []
+          
+        },
+        methods: {
+          addTodo() {
+            this.todos.push(this.task);
+            this.task = "";
+            // write your todo code here
+            // push a todo
+          },
+          completeTodo(val) {
+            // you want to add to the completed array whilst removing from the todos array
+            console.log(val, "---------------");
+            this.todos = this.todos.filter(todo => todo !== val);
+            this.completed.push(val);
+          },
+          callSwapi(section) {
+            fetch(`https://swapi.co/api/${section}/`).then(resp => {
+              resp.json().then(data => {
+                this.starWarsData = data.results;
+              });
+            });
+          },
+          arrange(section){
+            fetch(`https://swapi.co/api/${section}/`).then(resp => {
+              resp.json().then(data => {
+                this.starWarsData = data.results.sort(function(a, b) {
+                return a.length - b.length;
+});
+              });
+            });
+          }
+
+        }
+      });
+    </script>
+  </body>
+</html>

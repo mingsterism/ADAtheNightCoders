@@ -21,19 +21,20 @@
       />
 
       <div v-for="todo in todos">
-        <input type="checkbox" v-on:click="deleteTodo(todo)" />
-        <button v-on:click="deleteTodo(todo)">DELETE</button>
+        <input type="checkbox" />
         <ul>
           {{
             todo
           }}
         </ul>
       </div>
+      <button v-on:click="addTodos(todo)">Add</button>
 
       <h1>Completed</h1>
       <div v-for="todo in completed">
         <p>{{ todo }}</p>
       </div>
+      <button v-on:click="callSwapi(todo)">Call SWAPI</button>
     </div>
     <script>
       var app = new Vue({
