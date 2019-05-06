@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="app">
+      <h1>
+        {{ message }}
+      </h1>
+
+      <h2>Enter Number between 1 - 100</h2>
+      <input
+        type="text"
+        placeholder="Type any number"
+        v-model="numberguess"
+        @keyup.enter="add"
+      />
+      <button>Submit</button>
+      {{ show }}
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Guess The Number! ",
+          number: "",
+          numberguess: "",
+          answer: "10",
+          show: "",
+          correct: "Correct Answer",
+          wrong: "Wrong Answer"
+        },
+        methods: {
+          add(numberguess) {
+            this.number = this.number.push(this.numberguess);
+          },
+
+          computed: {
+            message: function() {
+              if (this.number === this.answer) {
+                console.log(this.show.push(this.correct));
+              } else {
+                console.log(this.show.push(this.wrong));
+              }
+              this.number = "";
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
