@@ -1,0 +1,3 @@
+var karmunProfile = {
+    name: "karmun"
+}

@@ -21,32 +21,15 @@
      
     <h1>{{message }}</h1>
     <p>{{ name }}</p>
+    <input type="edit" v-model= "myService" v-on:keyup.enter ="handleEnter"/>
+    
     <button v-on:click="Add('clean the floor')">Add</button>
     <button v-on:click="Delete('mop the windows')">Delete</button>
     <button v-on:click="Complete('sweep the room')">Complete</button>
-    <input type="edit" v-model= "myService" v-on:keyup.enter ="handleEnter"/>
+    <br>
     <h4 v-for = "(service, index) in service">{{service}}</h4>
 
-    <label class="container">One
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
-      </label>
-      
-      <label class="container">Two
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      
-      <label class="container">Three
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      
-      <label class="container">Four
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-    
+  
 
     
 

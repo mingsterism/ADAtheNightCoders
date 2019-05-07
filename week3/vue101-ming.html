@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- You need the script tag below to run vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      console.log("HEYYYY");
+    </script>
+    <title>Document</title>
+    <style>
+      .appClass {
+        border: 3px solid black;
+      }
+      .square {
+        width: 40px;
+        height: 40px;
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" class="appClass">
+      <h1>My First Vue Project</h1>
+      <h1>My new friend is {{ myName }}</h1>
+      <!-- <h3>My friends are {{ friends }}</h3> -->
+      <input type="text" v-model="myName" v-on:keyup.enter="handleEnter" />
+      <h4 v-for="(friend, index) in friends">{{ friend }}</h4>
+      <button>X</button>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        // your constructors. your html site can access any values in here
+        data: {
+          message: `Hello Vue! The random number is ${Math.random()}`,
+          friends: [],
+          myName: ""
+        },
+        // your class methods. These methods can access any value in the
+        // constructor simply by calling "this"
+        methods: {
+          attackNow() {
+            console.log("AttacKKKK");
+          },
+          attack() {
+            console.log("ATACKKK");
+            console.log(this.age);
+            this.age = this.age * 100;
+          },
+          inputNow() {
+            console.log("I am inputing");
+          },
+          handleEnter() {
+            this.friends.push(this.myName);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
