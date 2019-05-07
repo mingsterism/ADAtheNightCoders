@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Guess the number</h1>
+    <p>Select a number between 1-100</p>
+    <input type="number" name="numberguess" id="numberguess" />
+    <button onclick="buttonPressed()">How am I doing?</button>
+    <script type="text/javascript">
+      var numberToGuess = Math.ceil(Math.random() * 99);
+      var chances = 5;
+      function buttonPressed() {
+        var number = document.getElementById("numberguess").value;
+        if (number > numberToGuess) {
+          chances--;
+          alert(
+            "Come On!! Try a SMALLER Number. You have " +
+              chances +
+              " chances left"
+          );
+        } else if (number < numberToGuess) {
+          chances--;
+          alert(
+            "Come On!! Try a GREATER Number. You have " +
+              chances +
+              " chances left"
+          );
+        } else {
+          chances--;
+          alert("Congratz!! You win!!");
+        }
+      }
+    </script>
+  </body>
+</html>

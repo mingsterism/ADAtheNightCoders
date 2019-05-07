@@ -56,3 +56,25 @@
 //            )
 //    })
 //}
+
+//create = insert
+//read = find
+
+function add10(x) {
+  return x + 10;
+}
+const add2 = x => {
+  return x + 2;
+};
+function combinor(fn, x) {
+  return fn(x);
+}
+const anotherCombinor = (x, fn) => {
+  return fn(x);
+};
+
+app.get("/", (req, res) => res.send("Hello World!"));
+anotherCombinor(2, x => x + 2);
+console.log(combinor(add10, 10));
+
+// => equal to {return}

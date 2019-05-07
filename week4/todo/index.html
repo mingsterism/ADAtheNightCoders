@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      TODO: 
+      1) Allow user to click the completed todo and it will go back to the todos list
+      2) Allow user to edit the todo by clicking on it
+      3) Change todo to checkbox instead of button
+     -->
+    <div id="app">
+      <input
+        type="text"
+        v-model="task"
+        placeholder="Enter a task"
+        v-on:keyup.enter="addTodo()"
+      />
+      <h1>{{ message }}</h1>
+      <h1>Todos</h1>
+      <div v-for="todo in todos">
+        <button v-on:click="completeTodo(todo)">COMPLETE</button>
+        <p>{{ todo }}</p>
+      </div>
+      <h1>Completed</h1>
+      <div v-for="todo in completed">
+        <p>{{ todo }}</p>
+      </div>
+      <button v-on:click="callSwapi()">CALL SWAPI</button>
+      <h1>{{ starWarsData }}</h1>
+      <!-- <h1>Starwars data {{starWarsData.results[0].name}}</h1> -->
+      <!-- <h1>Starwars data {{computedStarWarsData}}</h1> -->
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+          todos: ["sweep", "mop", "clean", "run"],
+          completed: ["yaaaaaaa"],
+          task: "",
+          starWarsData: {}
+        },
+        computed: {
+          computedStarWarsData() {
+            return this.starWarsData.results[0].name;
+          }
+        },
+        methods: {
+          addTodo() {
+            this.todos.push(this.task);
+            this.task = "";
+            // write your todo code here
+            // push a todo
+          },
+          completeTodo(val) {
+            // you want to add to the completed array whilst removing from the todos array
+            console.log(val, "---------------");
+            this.todos = this.todos.filter(todo => todo !== val);
+            this.completed.push(val);
+          },
+          callSwapi() {
+            fetch("https://swapi.co/api/people/").then(resp => {
+              resp.json().then(data => {
+                this.starWarsData = data.results[0].name;
+              });
+            });
+          }
+        },
+        mounted() {
+          // console.log("Application has loaded")
+          // fetch("https://api.spacexdata.com/v3/capsules").then(resp => {
+          //   resp.json().then(data => {
+          //     console.log(data);
+          //   });
+          // });
+          fetch("https://swapi.co/api/people/").then(resp => {
+            resp.json().then(data => {
+              console.log(data);
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- 
+    How does the todo application work? 
+    1) Input a todo value
+    2) Records the todo in a list
+    3) User is able to click the checkbox once they finish the task
+    4) User is able to delete a todo
+
+    Software application
+    1) input box 
+    2) checkbox
+    3) button : something you can click
+
+    how is the todos being stored: array
+  
+    array of strings
+    [
+    "clean the floor", 
+    "mop the windows" ,
+    "sweep the room",
+    "sdlkfjasdfkljs"
+    ]
+  
+    array of objects
+    [
+      {
+        todo: "clean the floor", 
+        priority: 1
+      },
+      {
+        todo: "sweep the room",
+        priority:3
+      },
+      {
+        todo: "mop the windows",
+        priority: 2
+      },
+    ]
+ -->

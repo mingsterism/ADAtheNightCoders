@@ -31,6 +31,13 @@
       <div v-for="todo in completed">
         <p>{{ todo }}</p>
       </div>
+      <button v-on:click="callSwapi('hair_color')">Get hair color</button>
+      <ul v-for="data in starWarsData">
+        <li>{{ data }}</li>
+      </ul>
+      <ul v-for="human in humans">
+        <li>{{ human.hair_color }}</li>
+      </ul>
     </div>
     <script>
       var app = new Vue({
@@ -39,7 +46,9 @@
           message: "Things TO DO!",
           todos: [],
           task: "",
-          completed: []
+          completed: [],
+          starWarsData: {},
+          humans: []
         },
         methods: {
           addTodo() {
@@ -54,7 +63,21 @@
           completeTodo(val) {
             this.todos = this.todos.filter(todo => todo !== val);
             this.completed.push(val);
+          },
+          callSwapi(section) {
+            fetch("https://swapi.co/api/${section}/").then(resp => {
+              resp.json().then(data => {
+                this.starWarsData = data.results;
+              });
+            });
           }
+        },
+        mounted() {
+          fetch("https://swapi.co/api/people/").then(resp => {
+            resp.json().then(data => {
+              this.humans = data.results;
+            });
+          });
         }
       });
     </script>

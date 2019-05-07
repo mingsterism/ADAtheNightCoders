@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function militaryTime(twelveHour) {
 //   var split = twelveHour.split(":");
 //   var indicator = split[2].charAt(3);
@@ -25,3 +26,16 @@ function militaryTime(twelveHour) {
 //   }
 //   return answer;
 // }
+=======
+class Human {
+//   constructor(name, age, height, location, job, startingSalary, retirementAge) {
+//     this.name = name;
+//     this.age = age;
+//     this.height = height;
+//     this.location = location;
+//     this.job = job;
+//     this.startingSalary = startingSalary;
+//     this.retirementAge = retirementAge;
+//   }
+// }
+>>>>>>> origin/ming-branch

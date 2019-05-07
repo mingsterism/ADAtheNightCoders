@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function calculateAverage(x, attributes) {
 //   var ageFriends = friendsProfile.age;
 //   var totalAge = 0;
@@ -9,3 +10,8 @@ function calculateAverage(x, attributes) {
 // }
 
 // calculateAverage();
+=======
+var karmunProfile = {
+    name: "karmun"
+}
+>>>>>>> origin/ming-branch

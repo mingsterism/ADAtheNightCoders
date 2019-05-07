@@ -213,3 +213,9 @@ function calculateAverage(profile, attributes) {
 
 calculateAverage(erinProfile, "height");
 calculateAverage(pangProfile, "age");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/ming-branch
