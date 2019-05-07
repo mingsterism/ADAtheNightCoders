@@ -1,6 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const uri =
-  "mongodb+srv://admin:PASSWORDHERE@cluster0-bnd6s.gcp.mongodb.net/test?retryWrites=true";
+  "mongodb+srv://admin:blablaman1@cluster0-bnd6s.gcp.mongodb.net/test?retryWrites=true";
 // Connect to the db
 const client = MongoClient.connect(uri, { useNewUrlParser: true });
 

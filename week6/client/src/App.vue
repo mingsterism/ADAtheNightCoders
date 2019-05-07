@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <input @keyup.enter="addTask()" type="text">
     <ul>
       <li v-for="(task, index) in myTasks" :key="index">{{task.task}}</li>
     </ul>
@@ -9,8 +8,6 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "app",
   data() {
@@ -18,13 +15,21 @@ export default {
       myTasks: []
     };
   },
-  components: {
-    HelloWorld
+  methods: {
+    addTask() {
+      console.log("adding task");
+      fetch("http://localhost:3000/insertTask", {
+        method: "POST",
+        body: JSON.stringify({ task: "Clean the cow" }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    }
   },
   mounted() {
     const data = (async function() {
       const myTasks = await fetch("http://localhost:3000/mytodos");
-      // console.log(await myTasks.json())
       const tasks = await myTasks.json();
       return tasks;
     })();

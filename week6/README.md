@@ -23,3 +23,24 @@
 * You have build a machine / box - inputs and outputs. API's are the only way to communicate with these machines. 
 * API designers are very highly sought.
 * API types - CRUD
+
+
+## MongoDB Js commands
+```
+db.mycollection.find({}) // find all the documents
+db.mycollection.insertOne({name: "James", age: 20}) // insert a specific document
+db.mycollection.find({name: "James"})  // find documents with name James
+db.mycollection.find({age: {$gt: 19}})  // find documents with age greater than 19
+```
+
+
+
+
+
+
+
+
+
+
+
+
