@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <title>Document</title>
+</head>
+<body>
+        <div id="main-app">
+                <h1>{{ message }}</h1>
+                <input type="text" v-modal="myStuff" />
+                <p>{{ myStuff }}</p>
+                <button v-on:click="handleClick">CLICK</button>
+                <h4>My list of stuff is</h4>
+                <p v-for="stuff in listOfStuff">{{ stuff }}</p>
+              </div>
+              <script>
+                var vm = new Vue({
+                  el: "#main-app",
+                  data() {
+                    return {
+                      message: "this is a message",
+                      myStuff: "",
+                      listOfStuff: []
+                    };
+                  }, 
+                  methods: {
+          
+                  }
+                  // options
+                });
+              </script>
+    
+</body>
+</html>
